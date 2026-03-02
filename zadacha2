@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int a = 17, b = 5;
+    cout << "a / b = " << a / b << endl;
+    cout << "delenie nacelo: " << a / b << endl;
+    cout << "ostatok: " << a % b << endl;
+   
+    
+    return 0;
+}
