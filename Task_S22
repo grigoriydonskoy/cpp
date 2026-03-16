@@ -1,0 +1,20 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    ifstream file_to_read("output.txt");
+    int number;
+    int counter = 1;
+    while (file_to_read >> number) {
+        cout << counter << ". " << number << endl;
+        counter++;
+    }
+    if (counter == 1) {
+        cout << "Файл пуст!" << endl;
+    }
+    
+    file_to_read.close();
+    return 0;
+}
