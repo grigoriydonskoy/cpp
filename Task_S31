@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string numbers[] = {"ноль", "один", "два", "три", "четыре", 
+                        "пять", "шесть", "семь", "восемь", "девять"};
+    
+    int digit;
+    cout << "Введите число от 0 до 9: ";
+    cin >> digit;
+    
+    if (digit >= 0 && digit <= 9) {
+        cout << "Введеная цифра: " << numbers[digit] << endl;
+    } else {
+        cout << "Ошибка! Введите число от 0 до 9." << endl;
+    }
+    
+    return 0;
+}
