@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double calculatePolygonArea(double side, int n) {
+
+    return (n * side * side) / (4 * tan(M_PI / n));
+}
+
+int main() {
+    double side;
+    int n;
+    
+    cout << "Введите длину стороны: ";
+    cin >> side;
+    
+    cout << "Введите количество сторон: ";
+    cin >> n;
+    
+    if (n < 3) {
+        cout << "Многоугольник должен иметь минимум 3 стороны!" << endl;
+        return 1;
+    }
+    
+    double area = calculatePolygonArea(side, n);
+    cout << "Площадь " << n << "-угольника со стороной " << side << " = " << area << endl;
+    
+    return 0;
+}
